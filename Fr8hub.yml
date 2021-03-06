@@ -1,0 +1,22 @@
+# /Users/makingdevs/.config/tmuxinator/Fr8hub.yml
+
+name: Fr8hub
+root: ~/Documents/Workspaces/fr8hub/fr8hub
+
+socket_name: fr8hub
+startup_window: server
+
+windows:
+  - editor:
+    - vim
+  - server:
+      layout: even-horizontal
+      panes:
+        - elixir:
+          - git pull
+          - 'make all && make run'
+        - javascript:
+          - cd apps/fr8hub_web/assets
+          - npm install
+  - database:
+    - pgcli -u postgres -w postgres -w localhost
