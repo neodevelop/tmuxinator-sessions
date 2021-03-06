@@ -1,0 +1,22 @@
+# /Users/makingdevs/.config/tmuxinator/KeyboardHeroes.yml
+
+name: KeyboardHeroes
+root: ~/Documents/Workspaces/makingdevs/amazing_domino
+
+socket_name: keyboardheroes
+startup_window: server
+
+windows:
+  - editor:
+    - vim
+  - server:
+      layout: even-horizontal
+      panes:
+        - elixir:
+          - git pull
+          - 'mix deps.get; mix test; iex -S mix phx.server'
+        - javascript:
+          - cd assets
+          - npm install
+  - database:
+    - pgcli -u postgres -w postgres -w localhost
