@@ -1,0 +1,20 @@
+# /Users/makingdevs/.config/tmuxinator/Gengiskan.yml
+
+name: Gengiskan
+root: ~/Documents/Workspaces/fr8hub/gengis_kan
+
+socket_name: gengis_kan
+startup_window: server
+on_project_start: ssh-add -K ~/.ssh/id_rsa_fr8hub
+
+windows:
+  - editor:
+    - vim
+  - server:
+      layout: even-horizontal
+      panes:
+        - elixir:
+          - git pull
+          - mix compile; mix test
+  - database:
+    - pgcli -u postgres -w postgres -w localhost
