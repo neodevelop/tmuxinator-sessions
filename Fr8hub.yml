@@ -5,6 +5,7 @@ root: ~/Documents/Workspaces/fr8hub/fr8hub
 
 socket_name: fr8hub
 startup_window: server
+on_project_start: ssh-add -K ~/.ssh/id_rsa_fr8hub
 
 windows:
   - editor:
