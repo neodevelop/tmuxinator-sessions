@@ -14,10 +14,8 @@ windows:
       layout: even-horizontal
       panes:
         - elixir:
-          - git pull
-          - 'make all && make run'
+          - 'make run'
         - javascript:
           - cd apps/fr8hub_web/assets
-          - npm install
   - database:
     - pgcli -u postgres -w postgres -w localhost
