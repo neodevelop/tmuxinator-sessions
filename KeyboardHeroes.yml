@@ -1,7 +1,7 @@
 # /Users/makingdevs/.config/tmuxinator/KeyboardHeroes.yml
 
 name: KeyboardHeroes
-root: ~/Documents/Workspaces/makingdevs/amazing_domino
+root: ~/Documents/Workspaces/MakingDevsWorkspace/keyboard_heroes
 
 socket_name: keyboardheroes
 startup_window: server
